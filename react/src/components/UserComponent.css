@@ -1,0 +1,100 @@
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.user-component {
+  text-align: center;
+  margin: 0; /* Elimina todos los márgenes */
+  padding: 0; /* Elimina cualquier relleno */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-image: url('../images/fondodash.jpg'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+label {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.game-select {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px; /* Bordes más redondeados */
+  border: 2px solid #007bff; /* Borde con color azul */
+  background-color: #f9f9f9; /* Fondo claro */
+  color: #333; /* Texto oscuro */
+  outline: none; /* Elimina el contorno predeterminado */
+  transition: all 0.3s ease; /* Transición suave para hover y focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.game-select:hover {
+  border-color: #0056b3; /* Cambia el color del borde al pasar el mouse */
+  background-color: #e6f0ff; /* Fondo más claro al pasar el mouse */
+}
+
+.game-select:focus {
+  border-color: #0056b3; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}

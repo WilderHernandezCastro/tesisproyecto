@@ -1,0 +1,64 @@
+.user-form-container {
+  max-width: 400px;
+  margin: 50px auto; /* Centra el formulario vertical y horizontalmente */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.user-form-container h2 {
+  text-align: center;
+  color: #007bff; /* Color azul para destacar el título */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.user-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-form-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.user-form-container input,
+.user-form-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.user-form-container input:focus,
+.user-form-container select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.user-form-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-form-container button:hover {
+  background-color: #0056b3;
+}
+
+.user-form-container button:active {
+  background-color: #003f7f;
+}
