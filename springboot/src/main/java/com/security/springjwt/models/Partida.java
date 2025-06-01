@@ -9,6 +9,8 @@ public class Partida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "nombre_juego")
+    private String nombreJuego;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -21,6 +23,7 @@ public class Partida {
     private int cantidadErrores;
     private int cantidadIntentos;
     private int tiempoSegundos;
+    private int aciertos;
 
     private LocalDateTime fecha;
 
@@ -78,5 +81,22 @@ public class Partida {
 
     public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
+    }
+
+
+    public int getAciertos() {
+        return aciertos;
+    }
+
+    public void setAciertos(int aciertos) {
+        this.aciertos = aciertos;
+    }
+
+    public String getNombreJuego() {
+        return nombreJuego;
+    }
+
+    public void setNombreJuego(String nombreJuego) {
+        this.nombreJuego = nombreJuego;
     }
 }

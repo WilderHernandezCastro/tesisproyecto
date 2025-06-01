@@ -10,7 +10,7 @@ const required = value => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+        Campo requerido!
       </div>
     );
   }
@@ -20,7 +20,7 @@ const email = value => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-danger" role="alert">
-        This is not a valid email.
+        formato Email  incorrecto.
       </div>
     );
   }
@@ -30,7 +30,8 @@ const vusername = value => {
   if (value.length < 3 || value.length > 20) {
     return (
       <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
+        El usuario debe tener mas de 3 caracteres.
+
       </div>
     );
   }
@@ -40,7 +41,7 @@ const vpassword = value => {
   if (value.length < 6 || value.length > 40) {
     return (
       <div className="alert alert-danger" role="alert">
-        The password must be between 6 and 40 characters.
+        El password debe tener mas de  6 caracteres.
       </div>
     );
   }
@@ -98,18 +99,34 @@ export default class Register extends Component {
         this.state.password
       ).then(
         response => {
+
+          const msg = response.data.message === "User registered successfully!"
+            ? "¡Usuario registrado exitosamente!"
+            : response.data.message;
+
           this.setState({
-            message: response.data.message,
+            // message: response.data.message,
+            message: msg,
             successful: true
           });
         },
         error => {
-          const resMessage =
+          let resMessage =
             (error.response &&
               error.response.data &&
               error.response.data.message) ||
             error.message ||
             error.toString();
+
+
+
+          // Traducción del mensaje específico
+          if (resMessage === "Error: Username is already taken!") {
+            resMessage = "Error: ¡El nombre de usuario o password ya está en uso!";
+          }
+
+
+
 
           this.setState({
             successful: false,
@@ -139,7 +156,7 @@ export default class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Username</label>
+                  <label htmlFor="username">Usuario</label>
                   <Input
                     type="text"
                     className="form-control"
@@ -175,7 +192,7 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Sign Up</button>
+                  <button className="btn btn-primary btn-block">Crear Usuario</button>
                 </div>
               </div>
             )}

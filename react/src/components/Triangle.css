@@ -1,0 +1,217 @@
+.triangle-game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e8f5fe 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.triangle-game-container .triangle-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1e40af;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.triangle-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.triangle-stat-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.triangle-game-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.triangle-color-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.triangle-color-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.triangle-color-button:hover {
+    transform: scale(1.1);
+}
+
+.triangle-color-button.selected {
+    border-color: #1e40af;
+    transform: scale(1.1);
+}
+
+.triangle-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 0.75rem;
+}
+
+.triangle-button-validate {
+    background: #22c55e;
+    color: white;
+}
+
+.triangle-button-clear {
+    background: #eab308;
+    color: white;
+}
+
+.triangle-button-reset {
+    background: #3b82f6;
+    color: white;
+}
+
+.triangle-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.triangle-message-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.triangle-message-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.size-button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    margin: 0 4px;
+}
+
+h5{
+    font-size: 1.50rem;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.button-desing{
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    margin: 0.25rem 0;
+}
+
+.button-desing:hover {
+  background: #1d4ed8;
+}
+
+.triangle-shapes {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle-controls {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #2563eb;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .triangle-game-container {
+    padding: 0.5rem 0 80px 0;
+  }
+  .triangle-shapes svg {
+    width: 90vw !important;
+    height: 90vw !important;
+    max-width: 98vw;
+    max-height: 98vw;
+  }
+  .triangle-controls {
+    gap: 0.5rem;
+  }
+  .size-button {
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+  }
+  .button-desing {
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+  }
+  .triangle-header {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .triangle-stat-card {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.5rem;
+  }
+  img[alt="León"] {
+    width: 90px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+}

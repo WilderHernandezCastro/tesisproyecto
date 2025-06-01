@@ -9,7 +9,7 @@ const required = value => {
   if (!value) {
     return (
       <div className="alert alert-danger" role="alert">
-        This field is required!
+        Campo requerido!
       </div>
     );
   }
@@ -60,9 +60,18 @@ export default class Login extends Component {
         },
         error => {
           const resMessage =
+            // (error.response &&
+            //   error.response.data &&
+            //   error.response.data.message) ||
+
+
             (error.response &&
               error.response.data &&
-              error.response.data.message) ||
+              error.response.data.message === "Bad credentials"
+              ? "Usuario o contraseña incorrectos"
+              : error.response.data.message) ||
+
+
             error.message ||
             error.toString();
 
@@ -96,7 +105,7 @@ export default class Login extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">Usuario</label>
               <Input
                 type="text"
                 className="form-control"
@@ -127,7 +136,7 @@ export default class Login extends Component {
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Login</span>
+                <span>Iniciar Sesión</span>
               </button>
             </div>
 

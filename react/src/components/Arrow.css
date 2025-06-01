@@ -1,0 +1,225 @@
+.arrow-game-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0 4rem 0;
+    position: relative;
+}
+
+.arrow-title {
+    background: linear-gradient(90deg, #a21caf, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.arrow-description {
+    color: #334155;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.arrow-stats-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+}
+
+.arrow-stats-row span {
+    font-weight: 500;
+}
+
+.arrow-stats-row .font-bold {
+    font-weight: bold;
+}
+
+.arrow-stats-row .text-green-600 {
+    color: #16a34a;
+}
+
+.arrow-stats-row .text-red-600 {
+    color: #dc2626;
+}
+
+.arrow-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    border: 2px solid #a5b4fc;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px 0 rgba(30, 64, 175, 0.08);
+    width: 400px;
+    max-width: 90vw;
+}
+
+.arrow-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #f1f5f9;
+    border: 2px solid #e0e7ff;
+    transition: background 0.2s, border 0.2s;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.arrow-cell.selected {
+    background: #e0f2fe;
+    border: 2px solid #38bdf8;
+}
+
+.arrow-cell.model {
+    border: 2.5px solid #2563eb;
+    background: #f0f9ff;
+}
+
+.arrow-message-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.arrow-message-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.arrow-buttons-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttonvalidate, .resetbtnvalidate {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.buttonvalidate {
+    background: #22c55e;
+    color: #fff;
+}
+
+.buttonvalidate:hover {
+    background: #16a34a;
+}
+
+.resetbtnvalidate {
+    background: #2563eb;
+    color: #fff;
+}
+
+.resetbtnvalidate:hover {
+    background: #1d4ed8;
+}
+
+/* Solo el león, sin afectar los botones */
+.arrow-leon-img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: width 0.2s;
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .arrow-leon-img {
+        width: 90px;
+    }
+}
+
+@media (min-width: 900px) {
+    .arrow-leon-img {
+        width: 120px;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .arrow-leon-img {
+        width: 110px;
+        bottom: 16px;
+        right: 16px;
+    }
+    .arrow-board {
+        width: 320px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .arrow-game-container {
+        padding: 0.5rem 0 2rem 0;
+    }
+    .arrow-leon-img {
+        width: 70px;
+        bottom: 8px;
+        right: 8px;
+    }
+    .arrow-title {
+        font-size: 1.5rem;
+    }
+    .arrow-board {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 8px;
+        width: 98vw;
+        min-width: 0;
+        max-width: 100vw;
+    }
+    .arrow-cell {
+        padding: 8px;
+        min-width: 32px;
+        min-height: 32px;
+    }
+    .arrow-buttons-row {
+        gap: 1rem;
+    }
+    .buttonvalidate, .resetbtnvalidate {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        
+    }
+    .arrow-description {
+        font-size: 1rem;
+    }
+}
+.div-inline {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  margin-right: 10px;
+}

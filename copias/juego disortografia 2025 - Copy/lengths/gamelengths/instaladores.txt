@@ -1,0 +1,2 @@
+cd c:\Users\Wilder\Desktop\lengths\gamelengths
+npm install react-confetti

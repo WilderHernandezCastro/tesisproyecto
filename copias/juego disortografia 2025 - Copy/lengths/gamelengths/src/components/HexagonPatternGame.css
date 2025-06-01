@@ -1,0 +1,103 @@
+.game-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(to right bottom, #f0f9ff, #e0f2fe);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.game-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.game-instructions {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #475569;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hexagons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #000;
+}
+
+.hexagon-wrapper {
+  margin: 0 1rem;
+  transition: transform 0.3s ease;
+}
+
+.hexagon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.model-hexagon {
+  border-right: 3px solid #cbd5e1;
+  padding-right: 3rem;
+  margin-right: 2rem;
+}
+
+.attempts-counter {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.win-message {
+  background-color: #bbf7d0;
+  color: #166534;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+.reset-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

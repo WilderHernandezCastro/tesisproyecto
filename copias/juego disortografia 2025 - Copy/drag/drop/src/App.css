@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.game-container {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  box-sizing: border-box; /* Include padding in height and width calculation */
+  position: absolute; /* Position relative to the viewport */
+  top: 50%; /* Move to the vertical center */
+  left: 50%; /* Move to the horizontal center */
+  transform: translate(-50%, -50%); /* Adjust for element size */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #6a5acd; /* Color púrpura similar al de la imagen */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust width for responsiveness */
+  max-width: 40%; /* Limit maximum width */
+  margin: 0 auto;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Reduce gap for smaller screens */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  
+  
+}
+
+.draggable-image {
+  width: 80px; /* Adjust size for responsiveness */
+  height: 80px; /* Adjust size for responsiveness */
+  cursor: grab;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.draggable-image:hover {
+  transform: scale(1.1);
+  border-color: #6a5acd; /* Color púrpura */
+}
+
+.drop-zone {
+  width: 100%; /* Make drop zones responsive */
+  max-width: 140px; /* Limit maximum width */
+  height: auto; /* Adjust height automatically */
+  aspect-ratio: 1; /* Maintain square aspect ratio */
+  position: relative;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.drop-zone.correct {
+  border-color: #6a5acd; /* Color púrpura */
+  background-color: #e6e6fa; /* Fondo púrpura claro */
+}
+
+.fixed-image,
+.dropped-image {
+  width: 80%; /* Adjust size for responsiveness */
+  height: 80%; /* Adjust size for responsiveness */
+  position: absolute;
+  top: 10%; /* Center within the drop zone */
+  left: 10%; /* Center within the drop zone */
+  object-fit: contain; /* Ensure images maintain aspect ratio */
+}
+
+.fixed-image {
+  opacity: 0.6; /* Reduce opacidad para indicar que es una guía */
+}
+
+.dropped-image {
+  z-index: 1; /* Superpone la figura arrastrada sobre la fija */
+  opacity: 1;
+}
+
+.congratulations {
+  color: #6a5acd; /* Color púrpura */
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #5a4cb0;
+}
+
+.drag-container {
+  margin-bottom:40px; /* Add spacing between drag and drop */
+  width: 80%;
+}
+
+.drop-container {
+  margin-top: 50px;
+}
+
+.drag-container,
+.drop-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  width: 100%; /* Ensure full width alignment */
+}
+
+@media (max-width: 768px) {
+  .draggable-image {
+    width: 60px; /* Smaller size for smaller screens */
+    height: 60px;
+  }
+
+  .drop-zone {
+    max-width: 100px; /* Smaller drop zones for smaller screens */
+  }
+}

@@ -8,13 +8,13 @@ import java.util.List;
 public class Juego {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nombre;
     private String descripcion;
 
     public Juego() {
     }
-    public Juego(long id, String nombre, String descripcion) {
+    public Juego(Long id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -30,11 +30,11 @@ public class Juego {
         this.partidas = partidas;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

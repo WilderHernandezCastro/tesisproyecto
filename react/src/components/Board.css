@@ -1,0 +1,13 @@
+.leon-responsive {
+  transition: all 0.3s;
+}
+
+@media (max-width: 600px) {
+  .leon-responsive {
+    width: 28vw !important;
+    min-width: 60px !important;
+    max-width: 100px !important;
+    bottom: 2vw !important;
+    right: 2vw !important;
+  }
+}

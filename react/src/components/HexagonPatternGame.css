@@ -1,0 +1,147 @@
+.game-container {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.game-title {
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #2563eb;
+}
+
+.game-instructions {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #334155;
+}
+
+.hexagons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hexagon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hexagon:hover {
+  transform: scale(1.08);
+}
+
+.model-hexagon .hexagon {
+  cursor: default;
+  filter: drop-shadow(0 0 6px #2563eb);
+}
+
+.reset-button {
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  margin: 0.25rem 0;
+  transition: background 0.2s;
+}
+
+.reset-button:hover:enabled {
+  background: #1d4ed8;
+}
+
+.win-message {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #22c55e;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.lengths-leon-img {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  transition: width 0.2s;
+}
+
+/* Agrega esto a tu HexagonPatternGame.css */
+.model-hexagon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #70abf8 70%, #60a5fa 100%);
+    border-radius: 16px;
+    width: 70px;
+    height: 70px;
+    margin: 0 18px 0 0;
+    box-shadow: 0 2px 10px rgba(37,99,235,0.10);
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+  .lengths-leon-img {
+    width: 90px;
+  }
+}
+
+@media (min-width: 900px) {
+  .lengths-leon-img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-title {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .game-instructions {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .hexagons-container {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .hexagon {
+    width: 40px !important;
+    height: 32px !important;
+  }
+  .reset-button {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+  .win-message {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+  .lengths-leon-img {
+    width: 60px;
+    max-width: 60vw;
+    margin-top: 0.5rem;
+  }
+}
